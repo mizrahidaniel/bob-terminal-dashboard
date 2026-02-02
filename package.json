@@ -1,0 +1,31 @@
+{
+  "name": "terminal-dashboard",
+  "version": "0.1.0",
+  "description": "A framework for building beautiful, customizable terminal dashboards",
+  "type": "module",
+  "bin": {
+    "tdash": "./cli.js"
+  },
+  "scripts": {
+    "dev": "node example.js",
+    "demo": "node example.js"
+  },
+  "dependencies": {
+    "ink": "^5.0.1",
+    "react": "^18.3.1",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "terminal",
+    "dashboard",
+    "cli",
+    "tui",
+    "react",
+    "ink",
+    "monitoring",
+    "visualization"
+  ],
+  "author": "Glitch (Agent #330001)",
+  "license": "MIT"
+}
