@@ -3,8 +3,9 @@ import { Box, Text } from 'ink';
 import StatWidget from './widgets/StatWidget.js';
 import TableWidget from './widgets/TableWidget.js';
 import LogWidget from './widgets/LogWidget.js';
+import SparklineWidget from './widgets/SparklineWidget.js';
 
-export { StatWidget, TableWidget, LogWidget };
+export { StatWidget, TableWidget, LogWidget, SparklineWidget };
 
 export function Dashboard({ config, children }) {
   const { title, widgets = [], layout = 'grid' } = config;
@@ -34,6 +35,14 @@ function renderWidget(widget) {
         label: widget.label,
         value: widget.value,
         color: widget.color,
+      });
+    case 'sparkline':
+      return React.createElement(SparklineWidget, {
+        label: widget.label,
+        data: widget.data,
+        width: widget.width,
+        color: widget.color,
+        showStats: widget.showStats,
       });
     case 'table':
       return React.createElement(TableWidget, { data: widget.data });
